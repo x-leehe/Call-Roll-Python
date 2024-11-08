@@ -24,7 +24,7 @@ def callRoll():         # 基础点名功能，后续加入的功能基于此函
     engine.runAndWait()
     time.sleep(5)
 
-startInit=int(input("请选择点名模式！\n0.我怂了，退出！\n1.正常模式！\n2.击鼓传花！\n3.一站到底！（Canary）\n请选择……（0/1/2/3）"))
+startInit=int(input("请选择点名模式！\n0.我怂了，退出！\n1.正常模式！\n2.击鼓传花！\n3.一站到底（Canary）！\n请选择……（0/1/2/3）"))
 
 while startInit==1:
     startTrigger='y'
@@ -56,22 +56,14 @@ while startInit==2:
     break
 
 while startInit==3:
-    startTrigger='c'
-    while startTrigger=='c':
+    startTrigger='y'
+    while startTrigger=='Y' or startTrigger=='y':
         print('一站到底，即将开始……')
         callRoll()
         try:
-            startTrigger=input("是否继续（y），或者换人（c）？（Y/c/n）:")
+            startTrigger=input("是否换人（Y）？\n若不输入，则代表继续但不换人\n请选择（Y/n）:")
         except:
-            startTrigger='n'
-    while startTrigger=='Y' or startTrigger=='y':
-        try:
-            startTrigger=input("是否继续（y），或者换人（c）？（Y/c/n）:")
-        except:
-            startTrigger='n'
-    if startTrigger=='n':
-        break
-    break
+            startTrigger=input("是否换人（Y）？\n若不输入，则代表继续但不换人\n请选择（Y/n）:")
     
 print("点名结束！")
 time.sleep(5)
