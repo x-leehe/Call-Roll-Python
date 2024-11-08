@@ -24,7 +24,7 @@ def callRoll():         # 基础点名功能，后续加入的功能基于此函
     engine.runAndWait()
     time.sleep(5)
 
-startInit=int(input("请选择点名模式！\n0.我怂了，退出！\n1.正常模式！\n2.击鼓传花！\n3.一站到底！\n请选择……（0/1/2/3）"))
+startInit=int(input("请选择点名模式！\n0.我怂了，退出！\n1.正常模式！\n2.击鼓传花！\n3.一站到底！（Canary）\n请选择……（0/1/2/3）"))
 
 while startInit==1:
     startTrigger='y'
